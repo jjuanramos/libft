@@ -2,6 +2,9 @@
 project libft from 42 cursus
 
 ## Relevant resources
+
+### C stuff
+
 [A Crash Course in C](https://www.mattababy.org/~belmonte/Teaching/CCC/CrashCourseC.html)
 
 [Crash Course in C Berkeley](https://inst.eecs.berkeley.edu/~cs61c/sp10/tb/C_Crash_Course.pdf)
@@ -10,5 +13,9 @@ project libft from 42 cursus
 
 [Beej Guide to C](https://beej.us/guide/bgc/html/index-wide.html#audience)
 
-[Reminder Piscine](https://github.com/48d31kh413k/1337-Piscine-42)
+### Makefile stuff
+
+[GNU make](https://www.gnu.org/software/make/manual/make.html)
+[Makefile Tutor](https://clemedon.github.io/Makefile_tutor/)
+[Learn Makefiles](https://makefiletutorial.com/)
 
