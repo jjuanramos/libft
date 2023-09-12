@@ -16,6 +16,8 @@ project libft from 42 cursus
 ### Makefile stuff
 
 [GNU make](https://www.gnu.org/software/make/manual/make.html)
+
 [Makefile Tutor](https://clemedon.github.io/Makefile_tutor/)
+
 [Learn Makefiles](https://makefiletutorial.com/)
 
