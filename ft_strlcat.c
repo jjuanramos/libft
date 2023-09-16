@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 17:31:29 by juramos          ###   ########.fr       */
+/*   Created: 2023/09/16 17:30:02 by juramos           #+#    #+#             */
+/*   Updated: 2023/09/16 17:57:31 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_strlen(char *str);
-int		ft_atoi(char *str);
-int		ft_strlcpy(char *dst, char *src, int n);
-int		ft_strlcat(char *dst, char *src, int n);
+int	ft_strlcat(char	*dst, char *src, int n)
+{
+	int	pos;
+	int	len;
 
-#endif
+	pos = 0;
+	while (dst[pos] != '\0' && pos < n)
+		pos++;
+	len = ft_strlcpy(&dst[pos], src, n - pos);
+	return (len + pos);
+}
