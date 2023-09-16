@@ -6,11 +6,11 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:00:50 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/12 12:06:39 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/16 14:03:20 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
