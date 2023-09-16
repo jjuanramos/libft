@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 17:24:14 by juramos          ###   ########.fr       */
+/*   Created: 2023/09/16 17:04:51 by juramos           #+#    #+#             */
+/*   Updated: 2023/09/16 17:21:51 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_strlen(char *str);
-int		ft_atoi(char *str);
-int		ft_strlcpy(char *dst, char *src, int n);
+int	ft_strlcpy(char	*dst, char *src, int n)
+{
+	int	pos;
 
-#endif
+	pos = 0;
+	if (n != 0)
+	{
+		while (src[pos] != '\0' && pos < n - 1)
+		{
+			dst[pos] = src[pos];
+			pos++;
+		}
+		dst[pos] = '\0';
+	}
+	return (ft_strlen(src));
+}
