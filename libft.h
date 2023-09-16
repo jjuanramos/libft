@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 16:21:44 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/16 16:34:38 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strlen(char *str);
+int		ft_atoi(char *str);
 
 #endif
