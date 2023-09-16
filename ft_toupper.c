@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 16:49:34 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/15 16:56:27 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/16 16:24:16 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ int	ft_toupper(int c)
 {
 	if (ft_isalpha(c))
 	{
-		if (c >= 'a')
+		if (c >= 'a' && c <= 'z')
 			return (c - 32);
-		return (c);
 	}
-	return (0);
+	return (c);
 }
