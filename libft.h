@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/17 11:35:55 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/17 12:05:51 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int		ft_atoi(char *str);
 int		ft_strlcpy(char *dst, char *src, int n);
 int		ft_strlcat(char *dst, char *src, int n);
 char	*ft_strchr(char *s, int c);
+char	*ft_strrchr(char *s, int c);
 
 #endif
