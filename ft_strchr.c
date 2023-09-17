@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/17 11:35:55 by juramos          ###   ########.fr       */
+/*   Created: 2023/09/17 11:32:49 by juramos           #+#    #+#             */
+/*   Updated: 2023/09/17 11:57:23 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+char	*ft_strchr(char *s, int c)
+{
+	int	pos;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_strlen(char *str);
-int		ft_atoi(char *str);
-int		ft_strlcpy(char *dst, char *src, int n);
-int		ft_strlcat(char *dst, char *src, int n);
-char	*ft_strchr(char *s, int c);
-
-#endif
+	pos = 0;
+	while (s[pos] != '\0')
+	{
+		if (s[pos] == c)
+			return (&s[pos]);
+		pos++;
+	}
+	if (s[pos] == c)
+		return (&s[pos]);
+	return ('\0');
+}
