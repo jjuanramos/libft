@@ -6,16 +6,16 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:30:02 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 17:57:31 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:03:11 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcat(char	*dst, char *src, int n)
+size_t	ft_strlcat(char	*dst, const char *src, size_t n)
 {
-	int	pos;
-	int	len;
+	size_t	pos;
+	size_t	len;
 
 	pos = 0;
 	while (dst[pos] != '\0' && pos < n)

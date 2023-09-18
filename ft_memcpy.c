@@ -6,11 +6,13 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:36:31 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 11:52:05 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:07:23 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, void *src, int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	void	*ret;
 

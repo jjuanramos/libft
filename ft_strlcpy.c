@@ -6,15 +6,15 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 17:04:51 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 17:21:51 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:02:25 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char	*dst, char *src, int n)
+size_t	ft_strlcpy(char	*dst, const char *src, size_t n)
 {
-	int	pos;
+	size_t	pos;
 
 	pos = 0;
 	if (n != 0)

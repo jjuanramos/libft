@@ -6,11 +6,13 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:32:32 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 11:34:48 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:06:55 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
 	if (n != 0)
 	{

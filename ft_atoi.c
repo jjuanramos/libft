@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:28:24 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/16 17:24:01 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:01:31 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isspace(int c)
 	return (0);
 }
 
-char	*remove_whitespaces(char *str)
+const char	*remove_whitespaces(const char *str)
 {
 	int	pos;
 
@@ -31,7 +31,7 @@ char	*remove_whitespaces(char *str)
 	return (&str[pos]);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	num;

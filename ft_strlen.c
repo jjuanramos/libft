@@ -6,13 +6,15 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:16:00 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 11:02:34 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 12:56:18 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int		pos;
+	size_t	pos;
 
 	pos = 0;
 	while (str[pos] != '\0')
