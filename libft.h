@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:27:47 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/17 12:25:21 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 11:03:10 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int		ft_strlcat(char *dst, char *src, int n);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 int		ft_strncmp(char *s1, char *s2, int n);
+char	*ft_strnstr(char *haystack, char *needle, int len);
 
 #endif
