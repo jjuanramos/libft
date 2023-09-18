@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 11:32:49 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/17 11:57:23 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 10:17:18 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strchr(char *s, int c)
 	}
 	if (s[pos] == c)
 		return (&s[pos]);
-	return ('\0');
+	return (0);
 }

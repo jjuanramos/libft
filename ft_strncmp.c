@@ -6,24 +6,26 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 12:20:40 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/17 16:21:05 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 10:40:52 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, int n)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int	pos;
+	size_t	pos;
 
 	pos = 0;
 	if (n == 0)
 		return (0);
-	while (pos < n)
+	while (pos < n && s1[pos] != '\0' && s2[pos] != '\0')
 	{
-		if (s1[pos] != s2[pos] || pos == n - 1)
-			return (s1[pos] - s2[pos]);
+		if (s1[pos] != s2[pos])
+			return ((unsigned char)s1[pos] - (unsigned char)s2[pos]);
 		pos++;
 	}
-	return (s1[pos - 1] - s2[pos - 1]);
+	if (n == pos)
+		pos--;
+	return ((unsigned char)s1[pos] - (unsigned char)s2[pos]);
 }
