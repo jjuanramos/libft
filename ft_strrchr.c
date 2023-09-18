@@ -6,29 +6,22 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 11:59:03 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 10:16:49 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/18 13:33:42 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int	pos;
-	int	loc;
+	char	*last;
 
-	pos = 0;
-	loc = 0;
-	if (s[0] == c)
-		return (&s[0]);
-	while (s[pos] != '\0')
+	last = 0;
+	while (*s)
 	{
-		if (s[pos] == c)
-			loc = pos;
-		pos++;
+		if (*s == (unsigned char)c)
+			last = (char *)s;
+		s++;
 	}
-	if (s[pos] == c)
-		return (&s[pos]);
-	else if (loc == 0)
-		return (0);
-	else
-		return (&s[loc]);
+	if (!c)
+		last = (char *)s;
+	return (last);
 }
