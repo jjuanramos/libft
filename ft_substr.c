@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 12:12:43 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/19 13:21:21 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/19 18:05:29 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		free(ret);
 		return (0);
 	}
-	while (start--)
-		s++;
-	ft_strlcpy(ret, s, len + 1);
-	if (!ret)
+	if (start <= ft_strlen(s))
 	{
-		free(ret);
-		return (0);
+		while (start--)
+			s++;
 	}
+	ft_strlcpy(ret, s, len + 1);
 	return (ret);
 }
