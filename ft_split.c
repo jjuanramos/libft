@@ -6,54 +6,57 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:21:01 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/22 17:27:21 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/25 12:21:26 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	locate_char(char const *s, char c)
+int	get_number_of_slices(char const *s, char c)
 {
-	int	loc;
+	int	pos;
+	int	ret;
 
-	loc = 0;
-	while (s[loc] != '\0')
+	ret = 0;
+	pos = 0;
+	while (s[pos] != '\0')
 	{
-		if (s[loc] == c)
-			return (loc);
-		loc++;
+		if (s[pos] != c)
+		{
+			ret++;
+			while (s[pos] != c && s[pos] != '\0')
+				pos++;
+		}
+		else
+			pos++;
 	}
-	return (0);
+	return (ret);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		slices;
-	int		pos;
-	int		i;
+	int		ret_slice;
+	int		start;
 	char	**ret;
 
-	slices = 0;
-	pos = 0;
-	while (s[pos] != '\0')
-	{
-		if (s[pos++] == c)
-			slices++;
-	}
-	ret = malloc((slices + 2) * sizeof(char *));
-	if (!ret)
-	{
-		free(ret);
+	if (!s)
 		return (0);
-	}
-	pos = 0;
-	i = 0;
-	while (s[pos] != '\0')
+	ret = malloc((get_number_of_slices(s, c) + 1) * sizeof(char *));
+	if (!ret)
+		return (0);
+	ret_slice = 0;
+	while (*s)
 	{
-		if (s[pos] == c)
-			ret[i++] = ft_substr(s, pos + 1, locate_char(&s[pos + 1], c));
-		pos++;
+		if (*s != c)
+		{
+			start = 0;
+			while (*s != c && *s && ++start)
+				s++;
+			ret[ret_slice++] = ft_substr(s - start, 0, start);
+		}
+		else
+			s++;
 	}
-	ret[i] = 0;
+	ret[ret_slice] = 0;
 	return (ret);
 }
