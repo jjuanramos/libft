@@ -6,13 +6,13 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 16:28:24 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 13:01:31 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/26 13:31:24 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if (c == ' ' || c == '\n'
 		|| c == '\f' || c == '\r'
@@ -21,7 +21,7 @@ int	ft_isspace(int c)
 	return (0);
 }
 
-const char	*remove_whitespaces(const char *str)
+static const char	*remove_whitespaces(const char *str)
 {
 	int	pos;
 

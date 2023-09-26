@@ -6,13 +6,13 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:58:14 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/22 18:56:20 by juramos          ###   ########.fr       */
+/*   Updated: 2023/09/26 13:32:42 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_int_size(int n)
+static int	get_int_size(int n)
 {
 	int	size;
 
@@ -26,7 +26,7 @@ int	get_int_size(int n)
 	return (size);
 }
 
-int	pow_10(int size)
+static int	pow_10(int size)
 {
 	int	result;
 
@@ -36,7 +36,7 @@ int	pow_10(int size)
 	return (result);
 }
 
-int	divide_by_ten(int *n, int *size)
+static int	divide_by_ten(int *n, int *size)
 {
 	int	ret;
 
