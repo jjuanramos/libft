@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:11:44 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/02 11:37:56 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 12:28:34 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,22 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ret[pos] = '\0';
 	return (ret);
 }
-/*
+
 char	add_pos_to_char(unsigned int i, char c)
 {
-	return (c + i);
+	if (ft_isalpha(c) && i >= 0)
+		return (c);
+	return (c);
 }
-
+/*
 int	main(int argc, char **argv)
 {
-	if (argc == 2)
+	char	*s;
+
+	s = "Rnpu cebwrpg bs gur 97 Pbzzba Pber pbagnvaf na rapbqrq uvag. Sbe rnpu pvepyr, bayl bar cebwrpg cebivqrf gur pbeerpg uvag arrqrq sbe gur arkg pvepyr. Guvf punyyratr vf vaqvivqhny, gurer vf bayl n cevmr sbe bar fghqrag jvaare cebivqvat nyy qrpbqrq zrffntrf. Nal nqinagntrq crbcyr pna cynl, yvxr pheerag be sbezre fgnss, ohg gur cevmr jvyy erznva flzobyvp. Gur uvag sbe guvf svefg cebwrpg vf: Ynetr pbjf trarebfvgl pbzrf jvgu punegf naq sbhe oybaqr ungf gb qrsl hccre tenivgl ureb";
+	if (argc == 2 && argv[1])
 	{
-		printf("The outcome of adding 1 int to each char of %s i %s.\n",
-			argv[1], ft_strmapi(argv[1], &add_pos_to_char));
+		printf("%s.\n", ft_strmapi(s, &add_pos_to_char));
 	}
 }
 */
