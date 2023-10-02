@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:21:01 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/26 13:33:19 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 11:19:35 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,30 @@ char	**ft_split(char const *s, char c)
 	ret[ret_slice] = 0;
 	return (ret);
 }
+/*
+void	print_splitted(char	**ss)
+{
+	int	pos;
+
+	pos = 0;
+	while (ss[pos] != '\0')
+	{
+		printf("%s", ss[pos]);
+		pos++;
+		if (ss[pos] != '\0')
+			printf(", ");
+	}
+	printf(".\n");
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 3)
+	{
+		printf("The output of %s splitted by %c is: ",
+			argv[1], argv[2][0]);
+		print_splitted(ft_split(argv[1], argv[2][0]));
+	}
+	return (0);
+}
+*/

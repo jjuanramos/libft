@@ -6,7 +6,7 @@
 #    By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 16:43:25 by juramos           #+#    #+#              #
-#    Updated: 2023/09/25 13:10:14 by juramos          ###   ########.fr        #
+#    Updated: 2023/10/02 11:27:40 by juramos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	ar rc $(NAME) $?
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar rc $(NAME) $?
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
@@ -48,5 +48,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 

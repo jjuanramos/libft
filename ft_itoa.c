@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:58:14 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/26 13:32:42 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 11:23:49 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,3 +73,14 @@ char	*ft_itoa(int n)
 	ret[pos] = '\0';
 	return (ret);
 }
+/*
+int	main(int argc, char **argv)
+{
+	if (argc == 2)
+	{
+		printf("Value of itoa for %i is %s.\n",
+			ft_atoi(argv[1]), ft_itoa(ft_atoi(argv[1])));
+	}
+	return (0);
+}
+*/

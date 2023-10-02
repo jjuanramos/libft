@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:05:07 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/19 13:18:40 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 11:02:18 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[pos] = '\0';
 	return (s3);
 }
+/*
+int	main(int argc, char **argv)
+{
+	if (argc == 3)
+	{
+		printf("The output of ft_strjoin for %s and %s is %s.\n",
+			argv[1], argv[2], ft_strjoin(argv[1], argv[2]));
+	}
+	return (0);
+}
+*/
