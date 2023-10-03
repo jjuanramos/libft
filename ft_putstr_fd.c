@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:50:54 by juramos           #+#    #+#             */
-/*   Updated: 2023/09/18 14:00:59 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/03 12:11:10 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	if (s)
+	{
+		while (*s)
+			ft_putchar_fd(*s++, fd);
+	}
 }

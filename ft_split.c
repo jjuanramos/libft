@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:21:01 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/03 11:57:25 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/03 12:13:20 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,10 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 	char	**ret;
 
+	if (!s)
+		return (0);
 	ret = ft_calloc((get_number_of_slices(s, c) + 1), sizeof(char *));
-	if (!ret || !s)
+	if (!ret)
 		return (0);
 	ret_slice = 0;
 	while (*s)

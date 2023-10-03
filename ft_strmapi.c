@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:11:44 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/02 17:48:50 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/03 12:12:47 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,17 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*ret;
 	int		pos;
 
-	ret = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!ret)
-	{
-		free(ret);
+	if (!s)
 		return (0);
-	}
+	ret = ft_calloc((ft_strlen(s) + 1), sizeof(char));
+	if (!ret)
+		return (0);
 	pos = 0;
 	while (s[pos] != '\0')
 	{
 		ret[pos] = (*f)(pos, s[pos]);
 		pos++;
 	}
-	ret[pos] = '\0';
 	return (ret);
 }
 /*

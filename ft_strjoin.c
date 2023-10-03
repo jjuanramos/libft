@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:05:07 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/02 11:02:18 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/03 12:13:48 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	pos = 0;
 	helper = 0;
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (0);
-	s3 = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	s3 = ft_calloc((ft_strlen(s1) + ft_strlen(s2) + 1), sizeof(char));
 	if (!s3)
-	{
-		free(s3);
 		return (0);
-	}
 	while (s1[helper] != '\0')
 		s3[pos++] = s1[helper++];
 	helper = 0;
 	while (s2[helper] != '\0')
 		s3[pos++] = s2[helper++];
-	s3[pos] = '\0';
 	return (s3);
 }
 /*
