@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:04:21 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/02 13:48:11 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/03 14:14:51 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(int argc, char **argv)
 {
+	char	*s;
+
 	if (argc == 3)
 	{
+		s = ft_strtrim(argv[1], argv[2]);
 		printf("ft_strtrim for %s, trimming %s is %s.\n",
-			argv[1], argv[2], ft_strtrim(argv[1], argv[2]));
+			argv[1], argv[2], s);
+		free(s);
 	}
+	system("leaks -q a.out");
 }
 */
