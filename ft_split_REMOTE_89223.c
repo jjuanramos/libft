@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:21:01 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/03 11:57:25 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 18:01:48 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,16 @@ static int	get_number_of_slices(char const *s, char c)
 	return (ret);
 }
 
-static char	**free_split(char **ret, size_t ret_slice)
-{
-	while (ret_slice)
-		free(ret[ret_slice--]);
-	free(ret[ret_slice]);
-	free(ret);
-	return (0);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	size_t	ret_slice;
-	size_t	start;
+	int		ret_slice;
+	int		start;
 	char	**ret;
 
-	ret = ft_calloc((get_number_of_slices(s, c) + 1), sizeof(char *));
-	if (!ret || !s)
+	if (!s)
+		return (0);
+	ret = malloc((get_number_of_slices(s, c) + 1) * sizeof(char *));
+	if (!ret)
 		return (0);
 	ret_slice = 0;
 	while (*s)
@@ -60,12 +53,11 @@ char	**ft_split(char const *s, char c)
 			while (*s != c && *s && ++start)
 				s++;
 			ret[ret_slice++] = ft_substr(s - start, 0, start);
-			if (!ret[ret_slice - 1])
-				return (free_split(ret, ret_slice));
 		}
 		else
 			s++;
 	}
+	ret[ret_slice] = 0;
 	return (ret);
 }
 /*
@@ -92,7 +84,6 @@ int	main(int argc, char **argv)
 			argv[1], argv[2][0]);
 		print_splitted(ft_split(argv[1], argv[2][0]));
 	}
-	system("leaks -q a.out");
 	return (0);
 }
 */

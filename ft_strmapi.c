@@ -6,7 +6,7 @@
 /*   By: juramos <juramos@student.42madrid.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:11:44 by juramos           #+#    #+#             */
-/*   Updated: 2023/10/02 12:29:49 by juramos          ###   ########.fr       */
+/*   Updated: 2023/10/02 17:48:50 by juramos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ret[pos] = '\0';
 	return (ret);
 }
-
+/*
 char	add_pos_to_char(unsigned int i, char c)
 {
 	if (ft_isalpha(c) && i >= 0)
 		return (c);
 	return (c);
 }
-/*
+
 int	main(int argc, char **argv)
 {
 	char	*s;
