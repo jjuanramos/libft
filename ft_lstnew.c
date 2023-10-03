@@ -23,3 +23,14 @@ t_list	*ft_lstnew(void *content)
 	ret->next = 0;
 	return (ret);
 }
+/*
+int	main(void)
+{
+	char		*val;
+	t_list	*x;
+
+	val = "Hello";
+	x = ft_lstnew(val);
+	printf("content: %s, next: %s.\n", (char *)(x->content), (char *)(x->next));
+}
+*/
